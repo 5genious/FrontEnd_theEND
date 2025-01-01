@@ -1,0 +1,207 @@
+.content-area-table {
+  background: var(--secondary-color);
+  border-radius: 5px;
+  box-shadow: var(--light-shadow1);
+  padding: 20px 16px;
+
+  @media (max-width: 768px) {
+    padding: 12px;
+  }
+
+  th {
+    padding: 10px 20px;
+  }
+
+  table {
+    min-width: 100%;
+  }
+
+  .content-area {
+    padding: 52px 16px;
+  }
+
+  .data-table-title {
+    font-size: 18px;
+    color: var(--xl-text-color);
+    margin-bottom: 12px;
+  }
+
+  .data-table-diagram {
+    border-radius: 6px;
+    border: 1px solid var(--tbl-border-color) !important;
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+      height: 6px;
+      width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: var(--scroll-track-bg-color);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 100vh !important;
+      background-color: #e9e9e9;
+      outline: 1px solid rgba(0, 0, 0, 0.02);
+      outline-offset: -1px;
+    }
+
+    table {
+      min-width: 900px;
+      width: 100%;
+      border-collapse: collapse;
+      color: var(--text-color-inverted);
+
+      tbody tr:nth-child(even) {
+        background-color: var(--color-even-rows);
+      }
+
+      tbody tr:nth-child(odd) {
+        background-color: var(--color-odd-rows);
+      }
+
+      td,
+      th {
+        padding: 14px 46px;
+
+        @media (max-width: 768px) {
+          font-size: 15px;
+          padding: 12px 10px;
+        }
+      }
+
+      thead {
+        text-align: left;
+        font-size: 17px;
+        background-color: var(--thead-bg-color);
+        color: var(--text-az);
+
+        th {
+          &:last-child {
+            text-align: center;
+          }
+        }
+      }
+
+      .dt-cell-action {
+        text-align: center;
+      }
+
+      .dt-status,
+      .dt-priority {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        column-gap: 6px;
+      }
+
+      .dt-status-dot,
+      .dt-priority-dot {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 15px;
+        font-size: 0.9rem;
+        font-weight: bold;
+        padding: 10px 20px;
+        color: #ffffff;
+        white-space: nowrap;
+        width: 105px;
+      }
+
+      .dot-EN_ATTENTE {
+        background-color: #ffd966;
+        color: #7a5b00;
+      }
+
+      .dot-EN_COURS,
+      .dot-BASSE {
+        background-color: #c8e3fc;
+        color: #005082;
+      }
+
+      .dot-TRAITE {
+        background-color: #b6e0b7;
+        color: #3d7d3f !important;
+      }
+
+      .dot-ANNULE {
+        background-color: #f5bcbc;
+        color: #a60000 !important;
+      }
+
+      .dot-MOYENNE {
+        background-color: #ffd966;
+        color: #7a5b00;
+      }
+    }
+  }
+
+  .action-dropdown-btn {
+    color: var(--text-color-inverted);
+    position: relative;
+  }
+
+  .action-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 50%;
+    transform: translateX(50%);
+    height: auto;
+    min-width: 80px;
+    box-shadow: rgba(100, 100, 111, 0.1) 0px 1px 4px 0px;
+    background-color: var(--secondary-color);
+    padding: 6px 10px;
+    z-index: 1;
+    border-radius: 8px;
+    border: 1px solid var(--border-color-inverted);
+    text-align: left;
+  }
+
+  .dropdown-menu-item {
+    margin: 8px 0;
+  }
+  .loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .loader {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: linear-gradient(0deg, #ffffff 50%, #ff5c35 100%);
+    animation: spin 1s linear infinite;
+  }
+
+  .inner-circle {
+    width: 90%;
+    height: 90%;
+    background-color: white;
+    border-radius: 50%;
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .dropdown-menu-link {
+    color: var(--text-color-inverted);
+    font-weight: 600;
+    transition: var(--default-transition);
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}

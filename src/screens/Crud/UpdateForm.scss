@@ -1,0 +1,128 @@
+.update-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  .form-container {
+    max-width: 500px;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+
+    .icon {
+      width: 2.5rem;
+      height: 2.5rem;
+      background-color: #d3efcf;
+      color: #186911;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      font-size: 1.5rem;
+      margin-right: 1rem;
+    }
+
+    .title {
+      h2 {
+        font-size: 1.5rem;
+        color: #374151;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .form-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .input-group {
+      display: flex;
+      flex-direction: column;
+
+      label {
+        font-size: 0.875rem;
+        color: #374151;
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+      }
+
+      .input-field {
+        padding: 0.5rem 1rem;
+        border: 1px solid #d1d5db;
+        border-radius: 0.375rem;
+        color: #4b5563;
+        font-size: 0.875rem;
+
+        &:focus {
+          outline: none;
+          border-color: #1f2937;
+          box-shadow: 0 0 0 2px rgba(31, 41, 55, 0.2);
+        }
+      }
+    }
+
+    .date-fields {
+      display: flex;
+      gap: 1rem;
+    }
+  }
+
+  .button-group {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+
+    .cancel-button,
+    .create-button {
+      padding: 0.5rem 1rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+      border-radius: 0.375rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .cancel-button {
+      background-color: #f3f4f6;
+      color: #374151;
+      border: 1px solid #d1d5db;
+      width: 100%;
+
+      svg {
+        margin-right: 0.5rem;
+        width: 1rem;
+        height: 1rem;
+      }
+
+      &:hover {
+        background-color: #dbdbe0;
+        color: #374151;
+      }
+    }
+
+    .create-button {
+      background-color: #186911;
+      color: #ffffff;
+      border: none;
+      width: 100%;
+      transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+      &:hover {
+        background-color: #0b4203;
+        color: #e0ffe0;
+      }
+    }
+  }
+}

@@ -1,0 +1,91 @@
+.content-menu-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(250px, 1fr)); /* Augmentation de la taille minimale */
+  margin-top: 12px;
+  gap: 20px;
+
+  @media (max-width: 992px) {
+    grid-template-columns: repeat(2, minmax(200px, 1fr)); /* Colonnes adaptées aux écrans moyens */
+  }
+
+  @media (max-width: 576px) {
+    grid-template-columns: 100%;
+  }
+  
+}
+
+.menu-card {
+  display: flex;
+  align-items: center;
+  border: 5px solid var(--Deconnexion); /* Bord bleu marine */
+  border-radius: 38px; /* Arrondi des bords */
+  justify-content: space-between;
+  background: var( --secondary-color); /* Fond blanc */
+  box-shadow: var(--light-shadow1);
+  min-height: 280px;
+  min-width: 250px;
+  transition: background 0.3s ease, transform 0.3s ease; /* Transition fluide pour le hover */
+  cursor: pointer; /* Change le curseur pour indiquer que la carte est cliquable */
+  position: relative;
+  margin-left: 20px;
+  margin-right: 20px;
+  overflow: hidden;
+
+  &:hover {
+    transform: scale(1.05); /* Effet de zoom sur la carte */
+    background: var( --secondary-color); /* Changement de couleur de fond au survol */
+  }
+
+  .menu-card-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -142px;
+    color: var(--icon); /* Vous pouvez ajuster la couleur de l'icône */
+  }
+
+
+  @media (max-width: 768px) {
+    padding: 12px;
+  }
+}
+.menu-card * {
+  border: none !important; /* Aucune bordure sur les enfants */
+}
+.info-title {
+  color: var(--lg-text-color);
+  font-size: 40px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.info-value {
+  color: var(--xl-text-color);
+  font-weight: 700;
+  font-size: 38px !important; 
+  margin-bottom: 8px;
+}
+
+.info-text {
+  color: var(--base-text-color);
+  font-weight: 500;
+  font-size: 20px !important; 
+}
+
+// Global recharts tooltip customization
+.recharts-default-tooltip {
+  padding: 4px 8px !important;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 4px 12px;
+  border-radius: 4px;
+  background-color: var(--secondary-color) !important;
+  border: 1px solid var(--border-color-inverted) !important;
+}
+
+.recharts-tooltip-item-list {
+  * {
+    color: var(--text-color-inverted) !important;
+    font-size: 14px;
+    font-family: inherit !important;
+    opacity: 0.9;
+  }
+}
