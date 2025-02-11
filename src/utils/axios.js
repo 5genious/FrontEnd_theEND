@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const customFetch = axios.create({
-  baseURL: "http://localhost:8087",
+  baseURL: "https://gsincident.onrender.com/",
 });
 
 export default customFetch;
